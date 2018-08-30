@@ -1,0 +1,36 @@
+<% include partials/header.ejs %>
+
+<div class="ui main text container">
+<div class="ui ordered steps">
+  <div class="active step">
+    <div class="content">
+      <div class="title">Search</div>
+      <div class="description">Search TV Series</div>
+    </div>
+  </div>
+  <div class="disabled step">
+    <div class="content">
+      <div class="title">Select</div>
+      <div class="description">Select TV Series</div>
+    </div>
+  </div>
+  <div class="disabled step">
+    <div class="content">
+      <div class="title">Write</div>
+      <div class="description">Download Torrent</div>
+    </div>
+  </div>
+</div>
+<br>
+<h2>Search</h2>
+
+<form action="/search" method="POST" autocomplete="off">
+    <div class="ui input focus">
+    <input id ="autoff" type="text" name="sear" placeholder="Search"></input>
+    <input class="ui violet big basic button" type="submit">
+    </div>
+</form>
+
+</div>
+
+<% include partials/footer.ejs %>
