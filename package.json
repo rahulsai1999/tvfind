@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+<<<<<<< HEAD
     "@niksy/tv-shows": "^1.4.2",
+=======
+>>>>>>> c976f773a37a171e8ffdefb585a2e0ff87fe2925
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
