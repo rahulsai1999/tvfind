@@ -1,0 +1,62 @@
+<% include partials/header.ejs %>
+
+<div class="ui main text container">
+<div class="ui ordered steps">
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Search</div>
+      <div class="description">Search TV Series</div>
+    </div>
+  </div>
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Select</div>
+      <div class="description">Select TV Series</div>
+    </div>
+  </div>
+  <div class="active step">
+    <div class="content">
+      <div class="title">Write</div>
+      <div class="description">Download Torrent</div>
+    </div>
+  </div>
+</div>
+
+<div class="image">
+    <img src="http://img.omdbapi.com/?apikey=thewdb&i=tt<%=id%>">
+</div>
+    
+    <div class="ui huge header">Select the Torrent</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% for(var i=0;i<data["torrents"].length;++i){ %>
+            <% var item=data.torrents[i]; %>
+                <div class="item">
+                    <div class="content">
+                         <a class="header" href="<%=item.magnet_url%>"><%=item.title%></a>
+                         <div class="meta">
+                             <span><%=((item.size_bytes)/1048576).toFixed(2)%>MB</span>
+                         </div>
+                         <div class="extra">
+                             <a class="ui floated basic violet button" href="<%=item.magnet_url%>">Download Torrent</a>
+                                 <i class="right chevron icon"></i>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <% var rightl="/imdb/"+id+"/"+(count+1);%>
+    <% var leftl="/imdb/"+id+"/"+(count-1);%>
+    
+    <button class="ui right floated button" onclick="location.href='<%=rightl%>'">Next</button>
+    <button class="ui left floated button" onclick="location.href='<%=leftl%>'">Previous</button>
+
+</div>
+
+<% include partials/footer.ejs %>
+
+
+
+
