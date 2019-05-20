@@ -21,10 +21,7 @@ app.get("/",function(req,res){
 
 app.post("/search",function(req,res){
     sear=req.body.sear;
-<<<<<<< HEAD
-=======
     sear=sear.trim();
->>>>>>> c976f773a37a171e8ffdefb585a2e0ff87fe2925
     var arr=sear.split(" ");
     sear=arr.join("+");
     console.log(sear);
@@ -56,12 +53,7 @@ app.post("*",function(req,res){
 
 var server = http.createServer(app);
 
-var port = process.env.PORT; // 2. Using process.env.PORT
+var port = 80; // 2. Using process.env.PORT
   app.set('port', port);
 
-<<<<<<< HEAD
 server.listen(port);
-
-=======
-server.listen(port);
->>>>>>> c976f773a37a171e8ffdefb585a2e0ff87fe2925
